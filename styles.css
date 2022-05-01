@@ -1,0 +1,120 @@
+/* VARIABLES */
+:root {
+    --main-color: #f7f7f7;
+    --main-background-color: #2e2e2e;
+    --secondary-background-color: #1d1d1d;
+}
+
+
+/* NORMALIZE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* BODY */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--main-background-color);
+    color: var(--main-color);
+}
+
+#header {
+    background-color: var(--secondary-background-color);
+    padding: 1.8rem;
+    text-align: center;
+    text-shadow: #3c3c3c 1px 5px 10px;
+    margin-bottom: 2rem;
+}
+
+.container {
+    padding: 1rem;
+    margin: auto;
+    text-align: center;
+}
+
+.main__input {
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-color {
+    margin: 0 1rem;
+    width: 40px;
+    height: 30px;
+}
+
+#reset-btn {
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 0 1rem;
+    transition: 300ms ease-out;
+    height: 29px;
+}
+
+#reset-btn:hover {
+    color: var(--main-color);
+    background-color: var(--main-background-color);
+    transform: scale(1.1);
+}
+
+.grid {
+    display: grid;
+    width: 450px;
+    height: 450px;
+    background-color: var(--main-color);
+    border-radius: 0.3rem;
+}
+
+.square {
+    background-color: var(--main-color);
+    min-width: max-content;
+    min-height: max-content;
+    border: 1px solid #b1b1b1;
+}
+
+/* FOOTER */
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	width: 100%;
+	padding: 10px;
+	font-size: 0.8rem;
+	font-weight: 500;
+}
+  
+.fa-github {
+	color: var(--main-color);
+	font-size: 1.2rem;
+	transition: transform 300ms ease-in-out;
+}
+  
+.fa-github:hover {
+	transform: rotate(360deg) scale(1.2);
+}
+
+ @media only screen and (max-width: 460px) {
+    .grid {
+        width: 300px;
+        height: 300px;
+    }
+
+    #reset-btn {
+        height: 29px;
+    }
+
+    #input-color {
+        margin: 0 1rem 0 0.5rem;
+    }
+ }
